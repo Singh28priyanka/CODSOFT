@@ -7,7 +7,7 @@ public class NumberGame {
         int LowerBound=1;
         int UpperBound=100;
         int randomNumber=ran.nextInt(UpperBound-LowerBound+1)+ LowerBound;
-        int guess ,attempts=0,maxAttempts=5;
+        int guess ,attempts=0,maxAttempts=10;
         System.out.println("Guess the number between  " + LowerBound + " and " + UpperBound );
         while (attempts < maxAttempts){
             System.out.print("Enter your guess:");
@@ -15,14 +15,14 @@ public class NumberGame {
             attempts++;
 
             if(guess==randomNumber){
-                System.out.println("Correct! Right guess!!!!" + attempts +"attempts.");
+                System.out.println("Correct! Right guess!!!!" + attempts + " attempts.");
                 break;
             }
             else if(guess > randomNumber){
-                System.out.println("Too High! Try again.");
+                System.out.println(" Oops its too High!!!guess again.");
             }
             else {
-                System.out.println("Too Low! Try again.");
+                System.out.println(" Oops its too Low!!! guess again.");
             }
 
         }
